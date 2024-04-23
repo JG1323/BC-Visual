@@ -1,0 +1,8 @@
+USE Tienda;
+
+CREATE TABLE producto(
+IVA NOT NULL 
+Precio
+
+
+)
