@@ -2,8 +2,9 @@ USE Tienda;
 
 CREATE TABLE producto(
 IVA DOUBLE  
-Precio DOUBLE
-ID INT AUTO_INCREMENT
-Cantidad INT 
-Nombre varchar(30)
+Precio DOUBLE,
+Inventario INT
+ID INT AUTO_INCREMENT,
+Nombre varchar(),
+PRIMARY KEY (ID)
 )
