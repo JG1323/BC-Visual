@@ -2,28 +2,25 @@ CREATE DATABASE PiezasyProveedores
 USE PiezasyProveedores;
 
 CREATE TABLE piezas(
-    codPieza INT, 
-    nombre VARCHAR(100), 
+    codPieza INT AUTO_INCREMENT, 
+    nombre VARCHAR(100) NOT NULL, 
     PRIMARY KEY(codPieza)
 );
 
 CREATE TABLE proveedores(
-    id_proveedor CHAR(4), 
-    nombre VARCHAR(100),
-    PRIMARY KEY (idProveedor)
+    idProveedor INT AUTO_INCREMENT ,
+    nombre VARCHAR (100) NOT NULL,
+    PRIMARY KEY(idProveedor)
 );
 
 CREATE TABLE suministra(
-    precio INT, 
-    codPieza INT,  
-    idProveedor CHAR(4), 
-    PRIMARY KEY (codPieza, idProveedor),
-     FOREIGN KEY (codPieza)
-    REFERENCES piezas (codPieza)
-    ON DELETE CASCADE 
-    ON UPDATE CASCADE,
-    FOREIGN KEY (idProveedor)
-    REFERENCES proveedores (idProveedor)
-    ON DELETE CASCADE 
-    ON UPDATE CASCADE
+  codPieza INT,  
+    idProveedor INT,  
+    precio FLOAT NOT NULL, 
+    FOREIGN KEY (codPieza) REFERENCES piezas(codPieza)  -- 
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE,
+    FOREIGN KEY (idProveedor) REFERENCES proveedores(idProveedor)  -- 
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE
 );
