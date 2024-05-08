@@ -54,16 +54,17 @@ INSERT INTO articulos (nombre, precio, fabricante) VALUES
 ('Consola de videojuegos PS5', 499.99, 9),
 ('Monitor curvo Samsung 49"', 1099.99, 10);
 
--- 1.9
+-- 1.9.Obtener el nombre y precio de los artículos cuyo precio dea mayor o igual a 180 euros y ordenalos descendentemente por precio, y luego ascendentemente por nombre.
 SELECT nombre, precio FROM articulos WHERE precio >= 180 ORDER BY precio DESC, nombre ASC;
+
 -- 1.10, 1.11
 SELECT articulos.nombre AS "Artículo", fabricantes.nombre AS "Fabricante", precio AS "Precio de artículos por cada fabricante" FROM articulos, fabricantes WHERE articulos.fabricante = fabricantes.codigo;
 SELECT fabricantes.nombre AS "Fabricante", articulos.nombre AS "Artículo",  precio AS "Precio de artículos por cada fabricante" FROM articulos INNER JOIN fabricantes ON articulos.fabricante = fabricantes.codigo ORDER BY fabricantes.nombre;
--- 1.12 Obtener el precio medio de los productos de cada fabricante, mostrando solo los códigos de fabricante.
 
+-- 1.12 Obtener el precio medio de los productos de cada fabricante, mostrando solo los códigos de fabricante.
 SELECT fabricante AS "Código fabricante", ROUND(AVG(precio),2) AS "Media de precios" FROM articulos GROUP BY fabricante ORDER BY ROUND(AVG(precio),2);
 
--- 1.13
+-- 1.13.Obtener el precio medio de los productos de cada fabricante, mostrando el nombre del fabricante.
 SELECT f.nombre AS "Nombre fabricante", ROUND(AVG(a.precio),2) AS "Media de precios" FROM articulos a INNER JOIN fabricantes f
 ON a.fabricante = f.codigo 
 GROUP BY a.fabricante ORDER BY ROUND(AVG(a.precio),2);
@@ -76,7 +77,7 @@ GROUP BY f.nombre
 HAVING AVG(a.precio) >= 150
 ORDER BY AVG(a.precio);
 
---1.15
+--1.15.Obtener el nombre y precio del artículo más barato.
 SELECT nombre, precio FROM articulos
 WHERE precio = (SELECT MIN(precio) FROM articulos);
 
@@ -93,20 +94,20 @@ WHERE a.fabricante = f.codigo AND a.precio =
 )
 ORDER BY a.fabricante;
 
---1.17
+--1.17.Añadir un nuevo producto: Altavoces de 70 euros (del fabricante 2).
 INSERT INTO articulos (nombre, precio, fabricante) 
 VALUES ('Altavoces LG', 69.99, 2);
 
---1.18 *Uso del SELECT
+--1.18.Cambiar el nombre del producto 8 a 'Impresora Laser'.
 UPDATE articulos 
 SET nombre = 'Impresora Laser'
 WHERE codart = 8;
 
--- 1.19 --
+-- 1.19.Aplicar un descuento del 10% (multiplicar el precio por0'9) a todos los productos.
 UPDATE articulos 
 SET precio = precio * 0.9;
 
--- 1.20
+-- 1.20.Aplicar un descuento de 10 euros a todos los productos cuyo precio sea mayor o igual.
 UPDATE articulos
 SET precio = precio - 10
 WHERE precio >= 120;

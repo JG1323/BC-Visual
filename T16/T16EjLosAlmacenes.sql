@@ -61,11 +61,6 @@ ON a.codigo = c.almacen
 GROUP BY codigo;
 
 --3.9.Obtener los códigos de los almacenes que están saturados (los almacenes donde el numero de cajas es superior a la capacidad)
-
--- SELECT codigo
--- FROM almacenes
--- WHERE Numero_cajas > capacidad;
-
 SELECT a.lugar AS "Almacenes que superan su capacidad"
 FROM almacenes a
 WHERE capacidad <
@@ -91,14 +86,23 @@ WHERE almacen IN
 FROM almacenes
 WHERE `lugar` = 'Bilbao');
 
---3.11.Insertar un nuevo almacén en Barcelona con capacidad para 3 cajas.
+-- 3.11 Insertar un nuevo almacén en Barcelona con capacidad para 3 cajas.
+INSERT INTO almacenes (codigo, nombre, lugar, capacidad) VALUES 
+    (12,'Almacén L', 'Barcelona', 3);
 
---3.12.Insertar una nueva caja, con número de referencia 'H5RT', con contenido 'Papel', valor 200, y situada en el almacén 2.
+-- 3.12 Insertar una nueva caja con número de referencia 'H5RT', con contenido 'Papel', valor 200, situada en el almacén 2.
+INSERT INTO cajas (num_ref, contenido, valor, almacen) VALUES
+    (13, 'Papel', 200, 2);
 
---3.13.Rebajar el valor de todas las cajas un 15 %.
+-- 3.13 Rebajar el valor de todas las cajas un 15%.
+UPDATE cajas SET valor = valor * 0.85;
 
---3.14.Rebajar un 20 % el valor de todas las cajas cuyo valor sea superior al valor medio de todas las cajas.
+-- 3.14 Rebajar un 20% el valor de todas las cajas cuyo valor sea superior al valor medio de todas las cajas.
+UPDATE cajas SET valor = valor * 0.8 WHERE valor > (SELECT AVG(valor) FROM cajas); 
 
---3.15.Eliminar todas las cajas cuyo valor sea inferior a 100 €.
+-- 3.15 Eliminar todas las cajas cuyo valor sea inferior a 100€.
+DELETE FROM cajas WHERE valor < 100;
 
---3.16.Vaciar el contenido de los almacenes que están saturados
+-- 3.16 Vaciar el contenido de los almacenes que están saturados. 
+DELETE FROM almacenes WHERE codigo IN (SELECT almacen FROM cajas GROUP BY almacen 
+HAVING COUNT(*) > (SELECT capacidad FROM almacenes WHERE almacenes.codigo = cajas.almacen));

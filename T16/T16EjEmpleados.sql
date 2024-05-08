@@ -43,12 +43,11 @@ SELECT * FROM empleados WHERE apellidos LIKE '%L_pez%';
 -- 2.4 Obtener todos los datos de los empleados que se apellidan 'López' Obtener y los que se apellidan 'Pérez'.
 SELECT * FROM empleados WHERE apellidos = 'López' OR apellidos = 'Pérez'; 
 
--- 2.5 
+-- 2.5.Obtener todos los datos de los empleados que trabajan para el departamento 14.
 SELECT * FROM empleados WHERE departamento = 14; 
 -- No tengo valores cambiaria el número de departamento o insertaria datos para el departamento 14
 
--- 2.6 Obtener todos los datos de los empleados que trabajan para el
-departamento 37 y para el departamento 77
+-- 2.6 Obtener todos los datos de los empleados que trabajan para el departamento 37 y para el departamento 77
 SELECT * FROM empleados WHERE departamento IN (37, 77);
 -- SELECT * FROM empleados WHERE departamento=37 OR departamento=77
 
@@ -62,13 +61,10 @@ SELECT SUM(presupuesto) AS "Suma de presupuestos" FROM departamentos;
 --2.9 Obtener el numero de empleados en cada departamento.
 SELECT departamento, COUNT(*) AS "Número de empleados" FROM empleados GROUP by departamento;
 
-
 --2.10.Obtener un listado completo de empleados, incluyendo por cada empleado los datos del empleado y de su departamento.
-
 SELECT * FROM empleados;
 
 -- 2.11 Obtener un listado completo de empleados, incluyendo el nombre y apellidos del empleado junto al nombre y presupuesto de su departamento.
-
 SELECT empleados.nombre, empleados.apellidos, departamentos.nombre, departamentos.presupuesto 
 FROM empleados e INNER JOIN departamentos d 
 ON e.departamento = d.codigo;
@@ -125,14 +121,9 @@ UPDATE departamentos
 SET presupuesto = presupuesto * 0.9;
 
 -- 2.17. Reasignar a los empleados del departamento de investigaci´on (código 77) al departamento de informática (código 14).
-
--- Antes actualizo para que exista el 77 
--- UPDATE `departamentos` SET `codigo` = '77' WHERE `departamentos`.`codigo` = 18;
-
 UPDATE empleados
 SET departamento = 14
 WHERE departamento = 77;
-
 
 --2.18.Despedir a todos los empleados que trabajan para el departamento de informática
 DELETE FROM empleados
