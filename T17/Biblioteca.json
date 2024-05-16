@@ -1,0 +1,41 @@
+use Biblio   
+db.createCollection("libro")
+db.libros.insertMany([
+
+  {
+    "titulo": "EL SEÑOR DE LOS ANILLOS LA COMUNIDAD DEL ANILLO",
+    "fecha_lanzamiento": "29 de julio de 1954",
+    "Autor": "J. R. R. Tolkien",
+    "Categoria": "Fantasía heroica",
+    "Editorial": "George Allen & Unwin",
+    "idioma": "Ingles, Castellano",
+    "Páginas":"488" ,
+    "Descripción":"es el primero de los tres volúmenes que forman la novela El Señor de los Anillos, secuela de El hobbit, del escritor británico J. R. R. Tolkien. La obra fue escrita para ser publicada en un solo tomo, pero debido a su longitud y coste, la editorial Allen & Unwin decidió dividirla.",
+    "Portada":"https://imagessl8.casadellibro.com/a/l/s7/98/9788445009598.webp"
+  },
+
+    {
+      "titulo": "EL SEÑOR DE LOS ANILLOS LAS DOS TORRES",
+      "fecha_lanzamiento": "1 de noviembre de 1954 ",
+      "Autor": "J. R. R. Tolkien",
+      "Categoria": "Fantasía heroica",
+      "Editorial": "George Allen & Unwin",
+      "idioma": "Ingles, Castellano",
+      "Páginas":"408" ,
+      "Descripción":"La misión parece abocada al fracaso pero la aventura continua... La Compañía se ha disuelto y sus integrantes emprenden caminos separados. Frodo y Sam continúan solos su viaje a lo largo del río Anduin, perseguidos por la sombra misteriosa de un ser extraño que también ambiciona la posesión del Anillo. Mientras, hombres, elfos y enanos se preparan para la batalla final contra las fuerzas del Señor del Mal.",
+      "Portada":"https://imagessl4.casadellibro.com/a/l/s7/04/9788445009604.webp"
+    },
+
+    {
+      "titulo": "EL SEÑOR DE LOS ANILLOS EL RETORNO DEL REY",
+      "fecha_lanzamiento": "20 de octubre de 1955",
+      "Autor": "J. R. R. Tolkien",
+      "Categoria": "Fantasía heroica",
+      "Editorial": "George Allen & Unwin",
+      "idioma": "Ingles, Castellano",
+      "Páginas":"520" ,
+      "Descripción":"La batalla por la Tierra Media ha empezado. Las fuerzas de Saruman han sido destruidas y por primera vez parece que hay una pequeña esperanza. Sin embargo, el poder de Sauron crece y su interés se centra en Gondor, el último reducto de los hombres, cuyo heredero es Aragorn.",
+      "Portada":"https://imagessl1.casadellibro.com/a/l/s7/11/9788445009611.webp"
+    }
+  
+  ])
