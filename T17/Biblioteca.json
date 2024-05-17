@@ -34,6 +34,7 @@ db.libros.insertMany([
       "Editorial": "George Allen & Unwin",
       "idioma": "Ingles, Castellano",
       "Páginas":"520" ,
+      
       "Descripción":"La batalla por la Tierra Media ha empezado. Las fuerzas de Saruman han sido destruidas y por primera vez parece que hay una pequeña esperanza. Sin embargo, el poder de Sauron crece y su interés se centra en Gondor, el último reducto de los hombres, cuyo heredero es Aragorn.",
       "Portada":"https://imagessl1.casadellibro.com/a/l/s7/11/9788445009611.webp"
     }
