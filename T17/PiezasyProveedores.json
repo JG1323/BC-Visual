@@ -1,0 +1,49 @@
+use PiezasyProveedores
+
+db.createCollection("piezas") 
+db.piezas.insertMany(
+[
+    { "cod_pieza": 1, "nombre": "Pieza-Motor" },
+    { "cod_pieza": 2, "nombre": "Pieza-Frenos" },
+    { "cod_pieza": 3, "nombre": "Pieza-Volante" },
+    { "cod_pieza": 4, "nombre": "Pieza-Luces" },
+    { "cod_pieza": 5, "nombre": "Pieza-Bujias" },
+    { "cod_pieza": 6, "nombre": "Pieza-Retrovisor" },
+    { "cod_pieza": 7, "nombre": "Pieza-Transmisión" },
+    { "cod_pieza": 8, "nombre": "Pieza-Luces de freno" },
+    { "cod_pieza": 9, "nombre": "Pieza-Asiento" },
+    { "cod_pieza": 10, "nombre": "Pieza-Cambio de marchas" }
+  ]
+); 
+
+db.createCollection("suministra") 
+db.suministra.insertMany(
+[
+    { "id_proveedor": "1", "nombre": "Bosch" },
+    { "id_proveedor": "2", "nombre": "A.B.S" },
+    { "id_proveedor": "3", "nombre": "Ridex" },
+    { "id_proveedor": "4", "nombre": "Stark" },
+    { "id_proveedor": "5", "nombre": "TRW" },
+    { "id_proveedor": "6", "nombre": "ATE" },
+    { "id_proveedor": "7", "nombre": "Brembo" },
+    { "id_proveedor": "8", "nombre": "Vaico" },
+    { "id_proveedor": "9", "nombre": "Mapco" },
+    { "id_proveedor": "10", "nombre": "Valeo" }
+  ]
+); 
+
+db.createCollection("proveedores") 
+db.proveedores.insertMany(
+[
+    { "cod_pieza": 1, "id_proveedor": "1", "precio": 200.25 },
+    { "cod_pieza": 2, "id_proveedor": "2", "precio": 69.99 },
+    { "cod_pieza": 3, "id_proveedor": "3", "precio": 82.05 },
+    { "cod_pieza": 4, "id_proveedor": "4", "precio": 300.00 },
+    { "cod_pieza": 5, "id_proveedor": "5", "precio": 225.55 },
+    { "cod_pieza": 6, "id_proveedor": "6", "precio": 120.34 },
+    { "cod_pieza": 7, "id_proveedor": "7", "precio": 230.34 },
+    { "cod_pieza": 8, "id_proveedor": "8", "precio": 527.76 },
+    { "cod_pieza": 9, "id_proveedor": "9", "precio": 199.56 },
+    { "cod_pieza": 10, "id_proveedor": "10", "precio": 246.88 }
+  ]
+); 

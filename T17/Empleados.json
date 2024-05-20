@@ -1,0 +1,33 @@
+use empleados
+
+db.createCollection("empleados") 
+db.empleados.insertMany(
+    [
+        { "dni": "12121212", "nombre": "Luis", "apellidos": "Martín", "cod_departamento": 1 },
+        { "dni": "23232323", "nombre": "Lucía", "apellidos": "Hernández", "cod_departamento": 2 },
+        { "dni": "34343434", "nombre": "Miguel", "apellidos": "Ramírez", "cod_departamento": 3 },
+        { "dni": "45454545", "nombre": "Sofía", "apellidos": "Romero", "cod_departamento": 4 },
+        { "dni": "56565656", "nombre": "Juan", "apellidos": "Navarro", "cod_departamento": 5 },
+        { "dni": "67676767", "nombre": "Marta", "apellidos": "Domínguez", "cod_departamento": 6 },
+        { "dni": "78787878", "nombre": "Andrés", "apellidos": "Gil", "cod_departamento": 7 },
+        { "dni": "89898989", "nombre": "Carmen", "apellidos": "Vega", "cod_departamento": 8 },
+        { "dni": "90909090", "nombre": "Raúl", "apellidos": "Iglesias", "cod_departamento": 9 },
+        { "dni": "01010101", "nombre": "Patricia", "apellidos": "Castro", "cod_departamento": 10 }
+    ]
+);
+
+db.createCollection("departamentos") 
+db.departamentos.insertMany(
+    [
+        { "cod_departamento": 1, "nombre": "Compras", "presupuesto": 15000 },
+        { "cod_departamento": 2, "nombre": "Contabilidad", "presupuesto": 13000 },
+        { "cod_departamento": 3, "nombre": "Legal", "presupuesto": 14000 },
+        { "cod_departamento": 4, "nombre": "Producción", "presupuesto": 16000 },
+        { "cod_departamento": 5, "nombre": "I+D", "presupuesto": 17000 },
+        { "cod_departamento": 6, "nombre": "Mantenimiento", "presupuesto": 13500 },
+        { "cod_departamento": 7, "nombre": "Distribución", "presupuesto": 15500 },
+        { "cod_departamento": 8, "nombre": "Atención al Cliente", "presupuesto": 16500 },
+        { "cod_departamento": 9, "nombre": "Planificación", "presupuesto": 17500 },
+        { "cod_departamento": 10, "nombre": "Dirección", "presupuesto": 18000 }
+    ]
+);

@@ -1,0 +1,65 @@
+use investigadores  
+
+db.createCollection("facultad") 
+db.facultad.insertMany(
+[
+    { "cod_facultad": 1, "nombre": "Facultad de Ciencias" },
+    { "cod_facultad": 2, "nombre": "Facultad de Humanidades" },
+    { "cod_facultad": 3, "nombre": "Facultad de Ciencias Sociales" },
+    { "cod_facultad": 4, "nombre": "Facultad de Medicina" },
+    { "cod_facultad": 5, "nombre": "Facultad de Ingenieri¡ía" },
+    { "cod_facultad": 6, "nombre": "Facultad de Economía" },
+    { "cod_facultad": 7, "nombre": "Facultad de Derecho" },
+    { "cod_facultad": 8, "nombre": "Facultad de Ciencias de la Salud" },
+    { "cod_facultad": 9, "nombre": "Facultad de Ciencias de la Tierra" },
+    { "cod_facultad": 10, "nombre": "Facultad de Ciencias de la Vida" }
+  ]
+);
+
+db.createCollection("investigadores") 
+db.investigadores.insertMany(
+[
+    { "dni_investigador": "12345678", "nom_apels": "Juan Pérez", "cod_facultad": 1 },
+    { "dni_investigador": "23456789", "nom_apels": "María González", "cod_facultad": 2 },
+    { "dni_investigador": "34567890", "nom_apels": "Pedro Sanchez", "cod_facultad": 3 },
+    { "dni_investigador": "45678901", "nom_apels": "Ana López", "cod_facultad": 4 },
+    { "dni_investigador": "56789012", "nom_apels": "Jose Martínez", "cod_facultad": 5 },
+    { "dni_investigador": "67890123", "nom_apels": "Luis Hernández ", "cod_facultad": 6 },
+    { "dni_investigador": "78901234", "nom_apels": "Eva García", "cod_facultad": 7 },
+    { "dni_investigador": "89012345", "nom_apels": "Carlos Díaz", "cod_facultad": 8 },
+    { "dni_investigador": "90123456", "nom_apels": "Sofía Rodríguez", "cod_facultad": 9 },
+    { "dni_investigador": "01234567", "nom_apels": "Fransico Moreno", "cod_facultad": 10 }
+  ]  
+);
+
+db.createCollection("reserva") 
+db.reserva.insertMany(
+[
+    { "dni_investigador": "12345678", "num_serie": "E001", "comienzo": "2022-01-01", "fin": "2022-01-31" },
+    { "dni_investigador": "23456789", "num_serie": "E002", "comienzo": "2022-02-01", "fin": "2022-02-28" },
+    { "dni_investigador": "34567890", "num_serie": "E003", "comienzo": "2022-03-01", "fin": "2022-03-31"  },
+    { "dni_investigador": "45678901", "num_serie": "E004", "comienzo": "2022-04-01", "fin": "2022-04-30" },
+    { "dni_investigador": "56789012", "num_serie": "E005", "comienzo": "2024-05-05", "fin": "2024-05-19" },
+    { "dni_investigador": "67890123", "num_serie": "E006", "comienzo": "2022-05-01", "fin": "2022-06-30" },
+    { "dni_investigador": "78901234", "num_serie": "E007", "comienzo": "2022-06-01", "fin": "2022-07-31"},
+    { "dni_investigador": "89012345", "num_serie": "E008", "comienzo": "2022-07-01", "fin":  "2022-08-31" },
+    { "dni_investigador": "90123456", "num_serie": "E009", "comienzo": "2022-09-01", "fin": "2022-09-30" },
+    { "dni_investigador": "01234567", "num_serie": "E010", "comienzo": "2022-10-01", "fin": "2022-10-01" }
+  ]
+);
+
+db.createCollection("equipos") 
+db.equipos.insertMany(
+[
+    { "num_serie": "E001", "nombre": "Equipo de Investigación en Ciencias de la Salud", "cod_facultad": 1 },
+    { "num_serie": "E002", "nombre": "Equipo de Investigación en Ciencias de la Tierra", "cod_facultad": 2 },
+    { "num_serie": "E003", "nombre": "Equipo de Investigación en Ciencias de la Vida", "cod_facultad": 3 },
+    { "num_serie": "E004", "nombre": "Equipo de Investigación en Ingeniería", "cod_facultad": 4 },
+    { "num_serie": "E005", "nombre": "Equipo de Investigación en Economía", "cod_facultad": 5 },
+    { "num_serie": "E006", "nombre": "Equipo de Investigación en Derecho", "cod_facultad": 6 },
+    { "num_serie": "E007", "nombre": "Equipo de Investigación en Ciencias Sociales", "cod_facultad": 7 },
+    { "num_serie": "E008", "nombre": "Equipo de Investigación en Ciencias de la Salud", "cod_facultad": 8 },
+    { "num_serie": "E009", "nombre": "Equipo de Investigación en Ciencias de la Tierra", "cod_facultad": 9 },
+    { "num_serie": "E010", "nombre": "Equipo de Investigación en Ciencias de la Vida", "cod_facultad": 10 }
+  ]
+);

@@ -1,0 +1,65 @@
+use GrandesAlmacenes 
+
+db.createCollection("cajeros") 
+db.cajeros.insertMany(
+[
+    { "cod_cajero": 1, "nom_apels": "Roberto Molina" },
+    { "cod_cajero": 2, "nom_apels": "Carmen Herrero" },
+    { "cod_cajero": 3, "nom_apels": "Javier Moreno" },
+    { "cod_cajero": 4, "nom_apels": "Isabel Jiménez" },
+    { "cod_cajero": 5, "nom_apels": "Oscar Vargas" },
+    { "cod_cajero": 6, "nom_apels": "Patricia Torres" },
+    { "cod_cajero": 7, "nom_apels": "Diego Ramirez" },
+    { "cod_cajero": 8, "nom_apels": "Claudia Navarro" },
+    { "cod_cajero": 9, "nom_apels": "Ricardo Gil" },
+    { "cod_cajero": 10, "nom_apels": "Sara Alonso" }
+  ]
+); 
+
+db.createCollection("productos") 
+db.productos.insertMany(
+[
+    { "cod_producto": 501, "nombre": "Producto A", "precio": 19 },
+    { "cod_producto": 502, "nombre": "Producto B", "precio": 48 },
+    { "cod_producto": 503, "nombre": "Producto C", "precio": 36 },
+    { "cod_producto": 504, "nombre": "Producto D", "precio": 32 },
+    { "cod_producto": 505, "nombre": "Producto E", "precio": 25 },
+    { "cod_producto": 506, "nombre": "Producto F", "precio": 10 },
+    { "cod_producto": 507, "nombre": "Producto G", "precio": 22 },
+    { "cod_producto": 508, "nombre": "Producto H", "precio": 40 },
+    { "cod_producto": 509, "nombre": "Producto I", "precio": 12 },
+    { "cod_producto": 510, "nombre": "Producto J", "precio": 35 }
+  ]
+); 
+
+db.createCollection("maquinas_registradoras") 
+db.maquinas_registradoras.insertMany(
+[
+    { "cod_maquina": 1, "piso": 1 },
+    { "cod_maquina": 2, "piso": 2 },
+    { "cod_maquina": 3, "piso": 1 },
+    { "cod_maquina": 4, "piso": 3 },
+    { "cod_maquina": 5, "piso": 2 },
+    { "cod_maquina": 6, "piso": 1 },
+    { "cod_maquina": 7, "piso": 3 },
+    { "cod_maquina": 8, "piso": 2 },
+    { "cod_maquina": 9, "piso": 1 },
+    { "cod_maquina": 10, "piso": 3 }
+  ]
+); 
+
+db.createCollection("venta") 
+db.venta.insertMany(
+[
+    { "cod_cajero": 1, "cod_maquina": 1, "cod_producto": 1 },
+    { "cod_cajero": 2, "cod_maquina": 2, "cod_producto": 2 },
+    { "cod_cajero": 3, "cod_maquina": 3, "cod_producto": 3 },
+    { "cod_cajero": 4, "cod_maquina": 4, "cod_producto": 4 },
+    { "cod_cajero": 5, "cod_maquina": 5, "cod_producto": 5 },
+    { "cod_cajero": 6, "cod_maquina": 6, "cod_producto": 6 },
+    { "cod_cajero": 7, "cod_maquina": 7, "cod_producto": 7 },
+    { "cod_cajero": 8, "cod_maquina": 8, "cod_producto": 8 },
+    { "cod_cajero": 9, "cod_maquina": 9, "cod_producto": 9 },
+    { "cod_cajero": 10, "cod_maquina": 10, "cod_producto": 10 }
+  ] 
+); 

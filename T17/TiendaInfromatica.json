@@ -1,0 +1,29 @@
+use TiendaInfromatica
+
+db.createCollection("fabricantes")
+db.fabricantes.insertMany([
+    { nombre: "Sony" },
+    { nombre: "Samsung" },
+    { nombre: "Apple" },
+    { nombre: "LG Electronics" },
+    { nombre: "Huawei" },
+    { nombre: "Dell" },
+    { nombre: "Lenovo" },
+    { nombre: "HP" },
+    { nombre: "Microsoft" },
+    { nombre: "Acer" }
+]);
+
+db.createCollection("articulos")
+db.articulos.insertMany([
+    { nombre: "PlayStation 5", precio: 389.99, fabricante: "Sony" },
+    { nombre: "Samsung Galaxy S21", precio: 969.99, fabricante: "Samsung" },
+    { nombre: "iPhone 13 Pro", precio: 865.99, fabricante: "Apple" },
+    { nombre: "LG OLED65CXPUA", precio: 1999.99, fabricante: "LG Electronics" },
+    { nombre: "Huawei MateBook X Pro", precio: 1500.99, fabricante: "Huawei" },
+    { nombre: "Dell XPS 15", precio: 1599.99, fabricante: "Dell" },
+    { nombre: "Lenovo ThinkPad X1 Carbon", precio: 1871.99, fabricante: "Lenovo" },
+    { nombre: "HP Spectre x360", precio: 1143.99, fabricante: "HP" },
+    { nombre: "Microsoft Surface Laptop 4", precio: 1465.99, fabricante: "Microsoft" },
+    { nombre: "Acer Predator Helios 300", precio: 1620.99, fabricante: "Acer" }
+]);

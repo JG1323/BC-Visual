@@ -1,0 +1,33 @@
+use almacenes
+
+db.createCollection("almacenes") 
+db.almacenes.insertMany(
+[
+    { "cod_almacen": 11, "lugar": "Gijon", "capacidad": 1000 },
+    { "cod_almacen": 12, "lugar": "Tarragona", "capacidad": 1200 },
+    { "cod_almacen": 13, "lugar": "Sevilla", "capacidad": 1100 },
+    { "cod_almacen": 14, "lugar": "Cadiz", "capacidad": 1300 },
+    { "cod_almacen": 15, "lugar": "Zaragoza", "capacidad": 1050 },
+    { "cod_almacen": 16, "lugar": "Málaga", "capacidad": 1250 },
+    { "cod_almacen": 17, "lugar": "Madrid", "capacidad": 1150 },
+    { "cod_almacen": 18, "lugar": "Mallorca", "capacidad": 1350 },
+    { "cod_almacen": 19, "lugar": "Salamanca", "capacidad": 1400 },
+    { "cod_almacen": 20, "lugar": "Bilbao", "capacidad": 1450 }
+  ]
+); 
+
+db.createCollection("cajas") 
+db.cajas.insertMany(
+[
+    { "num_referencia": "C001", "contenido": "Altavoz", "valor": 50, "cod_almacen": 11 },
+    { "num_referencia": "C002", "contenido": "Ordenador", "valor": 70, "cod_almacen": 12 },
+    { "num_referencia": "C003", "contenido": "PS4", "valor": 60, "cod_almacen": 13 },
+    { "num_referencia": "C004", "contenido": "XBOX one", "valor": 80, "cod_almacen": 14 },
+    { "num_referencia": "C005", "contenido": "Cachimba", "valor": 65, "cod_almacen": 15 },
+    { "num_referencia": "C006", "contenido": "Moviles", "valor": 55, "cod_almacen": 16 },
+    { "num_referencia": "C007", "contenido": "Joyas", "valor": 75, "cod_almacen": 17 },
+    { "num_referencia": "C008", "contenido": "Chandals", "valor": 85, "cod_almacen": 18 },
+    { "num_referencia": "C009", "contenido": "Mochilas", "valor": 90, "cod_almacen": 19 },
+    { "num_referencia": "C010", "contenido": "Zapatos", "valor": 95, "cod_almacen": 20 }
+  ]  
+); 

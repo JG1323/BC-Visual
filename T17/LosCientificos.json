@@ -1,0 +1,49 @@
+USE LosCientifificos
+
+db.createCollection("cientificos") 
+db.cientificos.insertMany(
+[
+    { "dni_cientifico": "8765432B", "nom_apels": "Alejandro Martinez Calvo" },
+    { "dni_cientifico": "9012345J", "nom_apels": "Adrian Vega Belsue" },
+    { "dni_cientifico": "8901234I", "nom_apels": "Jose Vazquez Rodriguez" },
+    { "dni_cientifico": "4567890E", "nom_apels": "Alba García Lopez" },
+    { "dni_cientifico": "7890123H", "nom_apels": "Vanessa Pérez Martinez" },
+    { "dni_cientifico": "3769824A", "nom_apels": "Ian Vega Cano" },
+    { "dni_cientifico": "3456789D", "nom_apels": "Nuria Gópmez Fernández" },
+    { "dni_cientifico": "6789012G", "nom_apels": "Nerea Martinez Sole" },
+    { "dni_cientifico": "2345678C", "nom_apels": "Kyle García Rodriguez" },
+    { "dni_cientifico": "56789012", "nom_apels": "Luca Ortega Marin" }
+  ]
+);
+
+db.createCollection("asignado_a") 
+db.asignado_a.insertMany(
+[
+    { "dni_cientifico": "8765432B", "id_proyecto": "P001" },
+    { "dni_cientifico": "9012345J", "id_proyecto": "P002" },
+    { "dni_cientifico": "8901234I", "id_proyecto": "P003" },
+    { "dni_cientifico": "4567890E", "id_proyecto": "P004" },
+    { "dni_cientifico": "7890123H", "id_proyecto": "P005" },
+    { "dni_cientifico": "3769824A", "id_proyecto": "P006" },
+    { "dni_cientifico": "3456789D", "id_proyecto": "P007" },
+    { "dni_cientifico": "6789012G", "id_proyecto": "P008" },
+    { "dni_cientifico": "2345678C", "id_proyecto": "P009" },
+    { "dni_cientifico": "56789012", "id_proyecto": "P010" }
+  ]
+);
+
+db.createCollection("proyecto") 
+db.proyecto.insertMany(
+[
+    { "id_proyecto": "P001", "nombre": "Desarrollo de Software", "horas": 100 },
+    { "id_proyecto": "P002", "nombre": "Investigación Médica", "horas": 220 },
+    { "id_proyecto": "P003", "nombre": "Ingeniería Ambiental", "horas": 150 },
+    { "id_proyecto": "P004", "nombre": "Robótica Avanzada", "horas": 190 },
+    { "id_proyecto": "P005", "nombre": "Inteligencia Artificial", "horas": 130 },
+    { "id_proyecto": "P006", "nombre": "Nanotecnología", "horas": 120 },
+    { "id_proyecto": "P007", "nombre": "Bioinformática", "horas": 90 },
+    { "id_proyecto": "P008", "nombre": "Realidad Virtual", "horas": 200 },
+    { "id_proyecto": "P009", "nombre": "Exploración Espacial", "horas": 240 },
+    { "id_proyecto": "P010", "nombre": "Biotecnología", "horas": 170 }
+  ]
+);
