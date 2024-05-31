@@ -7,7 +7,7 @@ db.facultad.insertMany(
     { "cod_facultad": 2, "nombre": "Facultad de Humanidades" },
     { "cod_facultad": 3, "nombre": "Facultad de Ciencias Sociales" },
     { "cod_facultad": 4, "nombre": "Facultad de Medicina" },
-    { "cod_facultad": 5, "nombre": "Facultad de Ingenieri¡ía" },
+    { "cod_facultad": 5, "nombre": "Facultad de Ingeniería" },
     { "cod_facultad": 6, "nombre": "Facultad de Economía" },
     { "cod_facultad": 7, "nombre": "Facultad de Derecho" },
     { "cod_facultad": 8, "nombre": "Facultad de Ciencias de la Salud" },
