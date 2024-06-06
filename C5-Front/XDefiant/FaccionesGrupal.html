@@ -1,20 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facciones de XDefiant</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #ff5722, #ff9800);
+            color: #fff;
             padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .nav-container {
+            background-color: #ff9800;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .nav-container ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .nav-container ul li {
+            margin: 0 15px;
+        }
+        .nav-container ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 20px;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+        .nav-container ul li a:hover {
+            background-color: #ff5722;
+            border-radius: 4px;
         }
         .container {
-            max-width: 800px;
-            margin: auto;
-            background: #fff;
+            max-width: 1200px;
+            margin: 20px auto;
             padding: 20px;
+            background: #fff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -24,6 +63,8 @@
         }
         .faction {
             margin-bottom: 20px;
+            border-left: 6px solid #ff9800;
+            padding-left: 14px;
         }
         .faction h2 {
             color: #444;
@@ -31,47 +72,63 @@
         .faction p {
             color: #555;
         }
+        .faction img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <header>
         <h1>Facciones de XDefiant</h1>
+    </header>
 
+    <div class="nav-container">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="facciones.html">Facciones</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
         <div class="faction">
             <h2>Libertad (Liberté)</h2>
-            <img src="libertad.jpeg" width="300"/>
+            <img src="libertad.jpeg" alt="Libertad">
             <p><strong>Descripción:</strong> Inspirada en los Outcasts de Tom Clancy's The Division.</p>
             <p><strong>Habilidades:</strong> Enfocada en el soporte y la curación, esta facción tiene habilidades que pueden restaurar la salud y proporcionar apoyo táctico a los compañeros de equipo. Ideal para jugadores que prefieren roles de soporte y mantener a su equipo en pie durante el combate.</p>
         </div>
 
         <div class="faction">
             <h2>Echelon</h2>
-            <img src="Echelon.jpeg" width="300"/>
+            <img src="Echelon.jpeg" alt="Echelon">
             <p><strong>Descripción:</strong> Basada en el Third Echelon de Tom Clancy's Splinter Cell.</p>
             <p><strong>Habilidades:</strong> Especializada en el sigilo y la infiltración, Echelon tiene habilidades que permiten a los jugadores moverse sin ser detectados y recopilar información sobre el enemigo. Perfecta para jugadores que disfrutan de un enfoque más táctico y encubierto.</p>
         </div>
 
         <div class="faction">
             <h2>Phantoms</h2>
-            <img src="Fantasmas.jpeg" width="300"/>
+            <img src="Fantasmas.jpeg" alt="Phantoms">
             <p><strong>Descripción:</strong> Derivada de los soldados de Ghost Recon Phantoms.</p>
             <p><strong>Habilidades:</strong> Esta facción se enfoca en la defensa y la durabilidad, con habilidades que incluyen escudos y otros dispositivos defensivos. Ideal para aquellos que quieren ser la primera línea de defensa y proteger a sus compañeros de equipo.</p>
         </div>
 
         <div class="faction">
             <h2>Cleaners</h2>
-            <img src="Cleaners.jpeg" width="300"/>
+            <img src="Cleaners.jpeg" alt="Cleaners">
             <p><strong>Descripción:</strong> Tomados del universo de Tom Clancy's The Division.</p>
             <p><strong>Habilidades:</strong> Con un enfoque en el daño de área y la ofensiva, los Cleaners tienen habilidades que utilizan fuego y explosivos para eliminar a los enemigos. Perfecto para jugadores que prefieren una táctica agresiva y destructiva en el combate.</p>
         </div>
 
         <div class="faction">
             <h2>DedSec</h2>
-            <img src="dedsec.jpeg" width="300"/>
-            <p><strong></strong>Descripción:</strong> Inspirada en los juegos de Watch Dogs</p>
-            <p><strong>Habilidades:</strong>DedSec es una de las facciones jugables en XDefiant, inspirada en la serie de juegos Watch Dogs de Ubisoft. DedSec es un colectivo de hackers que lucha contra la opresión y la vigilancia masiva, utilizando su conocimiento tecnológico para desmantelar sistemas de control y exponer la corrupción.</p>
+            <img src="dedsec.jpeg" alt="DedSec">
+            <p><strong>Descripción:</strong> Inspirada en los juegos de Watch Dogs.</p>
+            <p><strong>Habilidades:</strong> DedSec es una de las facciones jugables en XDefiant, inspirada en la serie de juegos Watch Dogs de Ubisoft. DedSec es un colectivo de hackers que lucha contra la opresión y la vigilancia masiva, utilizando su conocimiento tecnológico para desmantelar sistemas de control y exponer la corrupción.</p>
         </div>
-
     </div>
 </body>
 </html>
