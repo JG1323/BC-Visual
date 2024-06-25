@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; 
+            margin: 0;
+            padding: 20px;
+            color: #000000; /* Texto negro */
+        }
+        h1 {
+            text-align: center;
+            background-color: #ffffff; 
+            color: #6B8E23; 
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #6B8E23;
+            text-decoration: underline; 
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #000; /* Borde del cuadro */
+        }
+        .parque {
+            color: #6B8E23; /* "Parque Natural" en verde oliva oscuro */
+        }
+        .sierra {
+            color: #8B4513; /* "Sierra Bicuerca" en marrón */
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 20px 20px 0;
+            float: left; 
+        }
+        ul li {
+            margin-bottom: 10px; /* Añade margen inferior a los elementos de la lista */
+        }
+        ul li a {
+            display: block; /* Hace que el enlace sea un bloque para que se pueda dimensionar */
+            text-decoration: none;
+            color: #FFFFFF; /* Texto blanco */
+            background-color: #801900; /* Fondo azul */
+            padding: 10px 20px; /* Añade relleno al botón */
+            border-radius: 5px; /* Bordes redondeados */
+            text-align: center; /* Centra el texto */
+            transition: background-color 0.3s; /* Transición suave para el cambio de color */
+        }
+        ul li a:hover {
+            background-color: #0056b3; /* Fondo azul oscuro al pasar el ratón */
+        }
+        ul li:nth-child(1) a {
+            background-color: #941c07; /* Fondo azul */
+        }
+        ul li:nth-child(2) a {
+            background-color: #04c904; /* Fondo naranja rojizo */
+        }
+        ul li:nth-child(3) a {
+            background-color: #04c904; /* Fondo verde lima */
+        }
+        ul li:nth-child(4) a {
+            background-color: #04c904; /* Fondo dorado */
+        }
+        
+        .content {
+            margin-left: 150px; /* Espacio a la izquierda del contenido para el menú */
+        }
+    </style>
+</head>
+<body>
+    <h1><span class="parque">Parque Natural</span> <span class="sierra">Sierra Bicuerca</span></h1>
+    <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#especies">Especies</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+        <li><a href="#galeria">Galería</a></li>
+    </ul>
+    <div class="content">
+        <div class="container">
+            <h2>Bienvenidos al Parque Natural</h2>
+            <p>El Parque Natural de Sierra Bicuerca, reserva de la biosfera, es referencia obligada del bosque y matorral mediterráneo interior, y hábitat de la fauna y flora autóctona.</p>
+
+            <p>Fue declarado parque natural en 1983, con una superficie de 9.090 hectáreas, siendo uno de los enclaves más extensos de la Comunidad Valenciana. Con un gran espesor de vegetación, y varios riachuelos, 
+                ofrece un clima ideal para las especies terrestres y acuáticas. Sus bosques, de carrasca y pino, albergan una amplia colonia de aves.</p>
+
+            <p>Entre las especies del parque podemos destacar una de las últimas colonias de buitre leonado de la zona. También veremos constantemente sobrevolado por el halcón peregrino o el águila perdicera. Al acercarnos a los riachuelos, 
+                veremos numerosas piadas de jabalíes y ciervos, y si no hacemos mucho ruido, no es difícil encontrar alguno abrevando bajo la atenta mirada del martín pescador, esperando a la despistada trucha.</p>
+        </div>
+    </div>
+</body>
+</html>
