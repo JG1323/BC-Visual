@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Imagen de Fondo</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        body {
+            background-image: url('Dei v.jpeg');
+            background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            background-position: center center; /* Centra la imagen en la página */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Hace que el cuerpo ocupe el 100% de la altura de la ventana */
+            margin: 0; /* Elimina los márgenes predeterminados */
+        }
+
+        table {
+            background-color: #ffffff;
+            width: 40%; /* Ajusta el ancho de la tabla */
+            height: 15%; /* Ajusta la altura de la tabla */
+            border-collapse: collapse; /* Opcional: Para eliminar los espacios entre las celdas */
+        }
+
+        th, td {
+            border: 1px solid black;
+            width: 35%; /* Ajusta el ancho de las celdas */
+            height: 45px; /* Ajusta la altura de las celdas */
+            text-align: center; /* Opcional: Para centrar el texto en las celdas */
+        }
+    </style>
+</head>
+<body> 
+    <table>
+        <tr>
+            <th colspan="2" + style="background-color: rgb(255, 255, 255);">Encabezado</th>
+        </tr>
+        <tr>
+            <td style="background-color: rgba(255, 251, 0, 0.52);">CELDA 1</td>
+            <td style="background-color: rgba(255, 251, 0, 0.52);">Celda 2</td>
+        </tr>
+    </table> 
+</body>
+</html>
