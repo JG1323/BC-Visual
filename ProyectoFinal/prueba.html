@@ -1,11 +1,316 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mi Página Web</title>
+    <title>TFT Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .social-media {
+            margin: 20px 0;
+            
+        }
+
+        .social-icon {
+            display: inline-block;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+
+        .social-icon img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .social-icon.facebook img {
+            background-color: #3b5998;
+        }
+
+        .social-icon.twitter img {
+            background-color: #00aced;
+        }
+
+        .social-icon.instagram img {
+            background-color: #517fa4;
+        }
+
+        .social-icon.linkedin img {
+            background-color: #0077b5;
+        }
+
+        .video-banner {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .video-banner iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .nav-container {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            border-radius: 8px;
+            z-index: 1; /* Aseguramos que el nav-container esté por encima del iframe */
+        }
+
+        .nav-container ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: transparent;
+        }
+
+        .nav-container ul li {
+            margin: 0 10px;
+        }
+
+        .nav-container ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 8px 15px;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-container ul li a:hover {
+            background-color: #ff5722;
+            border-radius: 4px;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .slide-content {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .navigation {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .navigation-button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .menu {
+            margin: 20px 0;
+            display: flex;
+            justify-content: left;   
+                 
+        }
+
+        .menu button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .menu button:hover {
+            background-color: #0056b3;
+        }
+
+        .content {
+            display: none;
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+
+        .content.active {
+            display: block;
+            float: left;
+        
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenido a mi página web</h1>
-    <p>Este es un video de YouTube de ejemplo:</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=mnv1VOZtJvo" frameborder="0" allowfullscreen></iframe>
+    <h1>TFT Services</h1>
+    <div class="video-banner">
+        <iframe src="https://www.youtube.com/embed/mnv1VOZtJvo" frameborder="0" allowfullscreen></iframe>
+        <div class="nav-container">
+            <ul>
+                <li><a href="#t1">Servicios terapeuticos para la salud</a></li>
+                <li><a href="#t2">Servicios administrativos</a></li>
+                <li><a href="#t3">Home</a></li>
+                <li><a href="#t4">Servicios digitales</a></li>
+                <li><a href="#t5">Servicios físico-deportivos</a></li>
+                <li><a href="#t6">Servicios educativos y socioculturales</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <p>Conéctate con nosotros en nuestras redes sociales:</p>
+    <div class="social-media">
+        <a href="https://www.facebook.com/tu_pagina" target="_blank" class="social-icon facebook">
+            <img src="iconos/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.twitter.com/tu_usuario" target="_blank" class="social-icon twitter">
+            <img src="iconos/twitter.png" alt="Twitter">
+        </a>
+        <a href="https://www.instagram.com/tu_usuario" target="_blank" class="social-icon instagram">
+            <img src="iconos/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/tu_usuario" target="_blank" class="social-icon linkedin">
+            <img src="iconos/linkedin.png" alt="LinkedIn">
+        </a>
+    </div>
+
+    <div class="menu">
+        <button onclick="showContent('info1')">¿Quienes somos?</button>
+        <button onclick="showContent('info2')">¿Donde nos ubicamos?</button>
+        <button onclick="showContent('info3')">¿Que ofrecemos?</button>
+    </div>
+
+    <div id="info1" class="content">
+        <h2>Quienes somos</h2>
+        <p>Esta es la información correspondiente a la primera opción del menú.</p>
+    </div>
+    <div id="info2" class="content">
+        <h2>Donde nos ubicamos</h2>
+        <p>Esta es la información correspondiente a la segunda opción del menú.</p>
+    </div>
+    <div id="info3" class="content">
+        <h2>Que ofrecemos</h2>
+        <p>Esta es la información correspondiente a la tercera opción del menú.</p>
+    </div>
+
+    <script>
+        function showContent(id) {
+            // Ocultar todas las secciones de contenido
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.classList.remove('active');
+            });
+
+            // Mostrar la sección de contenido seleccionada
+            var selectedContent = document.getElementById(id);
+            selectedContent.classList.add('active');
+        }
+    </script>
+
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="CentralCee freestyle .jpeg" alt="Slide 1">
+                <div class="slide-content">
+                    <h2>Central CEE</h2>
+                    <p>Información aleatoria 1.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="Dei v.jpeg" alt="Slide 2">
+                <div class="slide-content">
+                    <h2>Dei V</h2>
+                    <p>Información aleatoria 2.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="CentralCEE obsessed .jpeg" alt="Slide 3">
+                <div class="slide-content">
+                    <h2>Central CEE</h2>
+                    <p>Información aleatoria 3.</p>
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <button class="navigation-button" id="prev">&#10094;</button>
+            <button class="navigation-button" id="next">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const slide = document.querySelectorAll('.slide');
+        let currentIndex = 0;
+
+        document.getElementById('next').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slide.length;
+            updateSlider();
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slide.length) % slide.length;
+            updateSlider();
+        });
+
+        function updateSlider() {
+            slides.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+        }
+    </script>
 </body>
 </html>
