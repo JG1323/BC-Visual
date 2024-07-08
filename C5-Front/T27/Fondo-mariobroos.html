@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Example</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .small-box, .large-box {
+            background-image:url('fondomario.png'); 
+            background-size: cover;
+            background-position: center;
+            margin: 20px;
+            color: black;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .small-box {
+            width: 200px;
+            height: 100px;
+            border: 3px solid blue;
+            color: white;
+        }
+
+        .large-box {
+            width: 600px;
+            height: 400px;
+            border: 3px solid red;
+            color: rgb(255, 255, 255);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="small-box" id="box1">anterior</div>
+    <div class="large-box">Contenido del div de prueba</div>
+    <div class="small-box" id="box2">posterior</div>
+</body>
+</html>

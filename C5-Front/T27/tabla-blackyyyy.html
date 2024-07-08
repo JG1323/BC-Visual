@@ -2,38 +2,60 @@
 <html>
 <head>
 <style>
-table, th, td {
-  border: 1px solid black;
-}
+  table {
+    border-collapse: collapse;
+    width: 100%; /* Ancho de la tabla al 100% para ocupar todo el contenedor */
+    table-layout: fixed; /* Asegura que todas las celdas tengan un ancho igual */
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 10px; /* Espacio dentro de cada celda */
+    text-align: center; /* Centra el texto en las celdas */
+  }
+  .titulo {
+    background-color: rgba(1, 95, 2, 0.723);
+  }
+  .diferencias {
+    background-color: rgb(162, 62, 0);
+  }
+  .datos {
+    background-color: rgba(255, 238, 0, 0.775);
+  }
+  .datos-claros {
+    background-color: rgba(255, 247, 0, 0.51);
+  }
 </style>
 </head>
 <body> 
-<table style="background-color:#ffffff">
-   
+<table>
   <tr>
-    <th style="background-color: rgba(1, 95, 2, 0.723); width: 1000px; height:30px; ;">Diferencias entre el Perro y el hombre</th>
+    <th class="titulo" colspan="4">Diferencias entre el Perro y el hombre</th>
   </tr>
   <tr>
-    <td rowspan="2" + style="background-color: rgb(162, 62, 0); ">Diferencias</td> 
-    <td colspan="2"+ style="color: rgb(162, 62, 0); width: 200px; height:20px; "> Perro</td> 
-    <td rowspan="2" + style="background-color: rgb(162, 62, 0);">Hombre</td>
-    
-</tr>
-
-<tr>
-<td style="background-color: rgba(255, 238, 0, 0.775);"> Pequeño</td> <td style="background-color:  rgba(255, 238, 0, 0.775);">Grande</td> 
- 
-</tr>
-
-<tr>
-    <td>CELDA 7</td> <td style="background-color: rgba(255, 247, 0, 0.51);"> 10 meses</td>
-    <td style="background-color: rgba(255, 247, 0, 0.51);">18 a 24 meses</td>
-</tr>
-
-
-</tr>
-  
-  
+    <td class="diferencias" rowspan="2">Diferencias</td>
+    <td class="diferencias" colspan="2">Perro</td>
+    <td class="diferencias" rowspan="2">Hombre</td>
+  </tr>
+  <tr>
+    <td class="datos">Pequeño</td>
+    <td class="datos">Grande</td>
+  </tr>
+  <tr>
+    <td class="datos">Duración de crecimiento</td>
+    <td class="datos-claros">10 meses</td>
+    <td class="datos-claros">18 a 24 meses</td>
+    <td class="datos-claros">16 años</td>
+  </tr>
+  <tr>
+    <td class="datos">Tiempo de gestación</td>
+    <td class="datos-claros" colspan="2">58 a 63 días</td>
+    <td class="datos-claros">9 meses</td>
+  </tr>
+  <tr>
+    <td class="datos">Duración de vida del pelo/cabello</td>
+    <td class="datos-claros" colspan="2">1 año</td>
+    <td class="datos-claros">2 a 7 años</td>
+  </tr>
 </table> 
 </body>
 </html>
