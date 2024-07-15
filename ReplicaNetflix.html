@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replica de Netflix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            background-color: #141414;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #141414;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e50914;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .icons i {
+            color: #fff;
+            font-size: 20px;
+            margin-left: 15px;
+        }
+
+        .category {
+            margin: 20px;
+        }
+
+        .category h2 {
+            margin-bottom: 10px;
+        }
+
+        .carousel {
+            display: flex;
+            overflow-x: scroll;
+        }
+
+        .carousel img {
+            width: 200px;
+            height: 300px;
+            margin-right: 10px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">NETFLIX</div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Series TV</a></li>
+                <li><a href="#">Películas</a></li>
+                <li><a href="#">Novedades más vistas</a></li>
+                <li><a href="#">Mi lista</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <i class="fa fa-search"></i>
+            <i class="fa fa-gift"></i>
+            <i class="fa fa-bell"></i>
+            <i class="fa fa-user-circle"></i>
+        </div>
+    </header>
+    <main>
+        <section class="category">
+            <h2>Documentales</h2>
+            <div class="carousel">
+                <img src="Vikingos .png" alt="Vikingos">
+                <img src="vendios.png" alt="En busca de los vendidos perdidiso">
+                <img src="doc3.jpg" alt="Los hijos de Sam">
+                <img src="doc4.jpg" alt="La vida a todo color">
+                <img src="doc5.jpg" alt="Muchos hijos, un mono y un castillo">
+            </div>
+        </section>
+        <section class="category">
+            <h2>Volver a ver</h2>
+            <div class="carousel">
+                <img src="rewatch1.jpg" alt="Rick and Morty">
+                <img src="rewatch2.jpg" alt="Blacklist">
+                <img src="rewatch3.jpg" alt="Love, Death & Robots">
+                <img src="rewatch4.jpg" alt="Desencanto">
+                <img src="rewatch5.jpg" alt="Mindhunter">
+            </div>
+        </section>
+        <section class="category">
+            <h2>Series TV de EE UU para hacer un maratón</h2>
+            <div class="carousel">
+                <img src="series1.jpg" alt="Serie 1">
+                <img src="series2.jpg" alt="Serie 2">
+                <img src="series3.jpg" alt="Serie 3">
+                <img src="series4.jpg" alt="Serie 4">
+                <img src="series5.jpg" alt="Serie 5">
+            </div>
+        </section>
+    </main>
+</body>
+</html>
